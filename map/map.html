@@ -25,7 +25,7 @@
             <meta name="viewport" content="width=device-width,
                 initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
             <style>
-                #map_f2b42c356d22e9e0708726e2d1d0737c {
+                #map_4bc2460b6241fe6c033684bc239b2286 {
                     position: relative;
                     width: 100.0%;
                     height: 100.0%;
@@ -42,18 +42,18 @@
 <body>
     
     
-            <div class="folium-map" id="map_f2b42c356d22e9e0708726e2d1d0737c" ></div>
+            <div class="folium-map" id="map_4bc2460b6241fe6c033684bc239b2286" ></div>
         
 </body>
 <script>
     
     
-            var map_f2b42c356d22e9e0708726e2d1d0737c = L.map(
-                "map_f2b42c356d22e9e0708726e2d1d0737c",
+            var map_4bc2460b6241fe6c033684bc239b2286 = L.map(
+                "map_4bc2460b6241fe6c033684bc239b2286",
                 {
-                    center: [36.3523564, 127.3931999],
+                    center: [33.380345, 126.5418232],
                     crs: L.CRS.EPSG3857,
-                    zoom: 30,
+                    zoom: 10,
                     zoomControl: true,
                     preferCanvas: false,
                 }
@@ -63,48 +63,33 @@
 
         
     
-            var tile_layer_69e215cafcb129320e33101eb7593ea6 = L.tileLayer(
+            var tile_layer_c767898656a7b7c8a149d5799a406ac6 = L.tileLayer(
                 "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
                 {"attribution": "Data by \u0026copy; \u003ca target=\"_blank\" href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca target=\"_blank\" href=\"http://www.openstreetmap.org/copyright\"\u003eODbL\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
-            ).addTo(map_f2b42c356d22e9e0708726e2d1d0737c);
+            ).addTo(map_4bc2460b6241fe6c033684bc239b2286);
         
     
-            var marker_cluster_42e9b2b3c15dc956015c627e9768f3a2 = L.markerClusterGroup(
+            var marker_cluster_c1c470aa4c6c2fbaac69c799062706a3 = L.markerClusterGroup(
                 {}
             );
-            map_f2b42c356d22e9e0708726e2d1d0737c.addLayer(marker_cluster_42e9b2b3c15dc956015c627e9768f3a2);
+            map_4bc2460b6241fe6c033684bc239b2286.addLayer(marker_cluster_c1c470aa4c6c2fbaac69c799062706a3);
         
     
-            var marker_59938ea68736ea2d041f2b6ec08dab3e = L.marker(
-                [36.3523564, 127.3931999],
+            var marker_dda02f3844c4aa52bf17bdd269b3c09f = L.marker(
+                [33.5150737361162, 126.526342790758],
                 {}
-            ).addTo(map_f2b42c356d22e9e0708726e2d1d0737c);
+            ).addTo(map_4bc2460b6241fe6c033684bc239b2286);
         
     
-            var icon_da00e6366fcc3209e866b77769b5301c = L.AwesomeMarkers.icon(
-                {"extraClasses": "fa-rotate-0", "icon": "home", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            var icon_299f9765f290e8f5b4615f1f24a7979c = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "asterisk", "iconColor": "black", "markerColor": "orange", "prefix": "glyphicon"}
             );
-            marker_59938ea68736ea2d041f2b6ec08dab3e.setIcon(icon_da00e6366fcc3209e866b77769b5301c);
+            marker_dda02f3844c4aa52bf17bdd269b3c09f.setIcon(icon_299f9765f290e8f5b4615f1f24a7979c);
         
     
-        var popup_f43c0664c6fa16553e0e2f7cbae41b6d = L.popup({"maxWidth": "100%"});
-
-        
-            
-                var html_1384b612970d3bc32ccc6ebb26d4ed8b = $(`<div id="html_1384b612970d3bc32ccc6ebb26d4ed8b" style="width: 100.0%; height: 100.0%;"><a href='https://github.com/' target='_blank'>Github</a></div>`)[0];
-                popup_f43c0664c6fa16553e0e2f7cbae41b6d.setContent(html_1384b612970d3bc32ccc6ebb26d4ed8b);
-            
-        
-
-        marker_59938ea68736ea2d041f2b6ec08dab3e.bindPopup(popup_f43c0664c6fa16553e0e2f7cbae41b6d)
-        ;
-
-        
-    
-    
-            marker_59938ea68736ea2d041f2b6ec08dab3e.bindTooltip(
+            marker_dda02f3844c4aa52bf17bdd269b3c09f.bindTooltip(
                 `<div>
-                     Home<br>집
+                     
                  </div>`,
                 {"sticky": true}
             );
