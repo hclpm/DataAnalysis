@@ -39,7 +39,7 @@ print(f"\n[Average Accuracy: {round((sum(accuracy_arr)/len(accuracy_arr)), 4) * 
 
 # 하이퍼 파라미터 후보 값 지정
 param = {
-    'max_depth' : [4],
+    'max_depth' : [1, 2, 3, 4],
     'min_samples_leaf' : [1, 2, 3, 4],
     'min_samples_split' : [4, 5, 6, 7, 8]
 }
