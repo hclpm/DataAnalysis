@@ -106,4 +106,3 @@ def HC_LogisticRegression(x, y):
         accuracy_arr.append(accuracy)
         
     print(f"\n[LogisticRegression Average Accuracy: {round(accuracy_score(y_test, pred), 4) * 100} %]\n")
-
