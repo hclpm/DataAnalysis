@@ -24,7 +24,7 @@ for i in range(5):
 
     # 정확도 계산
     accuracy = accuracy_score(y_test, pred)
-    print(f"Act{i:2} Accuracy:", accuracy)
+    print(f"Act{i:2}| Accuracy:", accuracy)
     accuracy_arr.append(accuracy)
 
 print(f"\n[Average Accuracy: {round((sum(accuracy_arr)/len(accuracy_arr)), 4) * 100} %]\n")
