@@ -1,4 +1,3 @@
-
 # [Format]
 #
 # HC_DecisionTree(X_train, y_train):
@@ -22,9 +21,9 @@ def HC_DecisionTree(x, y):
 
     # 하이퍼 파라미터 후보 값 지정
     param = {
-        'max_depth' : [1, 2, 3, 4],
-        'min_samples_leaf' : [1, 2, 3, 4],
-        'min_samples_split' : [4, 5, 6, 7, 8]
+        'max_depth' : [3, 4, 5],
+        'min_samples_leaf' : [1, 2, 3],
+        'min_samples_split' : [4, 5, 6, 7]
     }
 
     for i in range(10):
@@ -32,14 +31,15 @@ def HC_DecisionTree(x, y):
         X_train, X_test, y_train, y_test = train_test_split(x, y, test_size=0.2)
 
         # DecisionTree모델 생성&학습
-        dt_classifier = DecisionTreeClassifier(random_state=None)
-        grid_dt_classifier = GridSearchCV(dt_classifier, param_grid=param, scoring='accuracy', cv=5, n_jobs=1)
+        dt_classifier = DecisionTreeClassifier(random_state=11)
+        grid_dt_classifier = GridSearchCV(dt_classifier, param_grid=param, scoring='accuracy', cv=5, n_jobs=-1)
         grid_dt_classifier.fit(X_train, y_train)
 
         pred_withBP = grid_dt_classifier.best_estimator_.predict(X_test)
         accuracy = accuracy_score(y_test, pred_withBP)
         accuracy_arr.append(accuracy)
-    print(f"\n[DecisionTree Average Accuracy: {round((sum(accuracy_arr)/len(accuracy_arr)), 4) * 100} %]")
+    print(f"\n[HyperParameters: {grid_dt_classifier.best_params_}]")
+    print(f"[DecisionTree Average Accuracy: {round((sum(accuracy_arr)/len(accuracy_arr)), 4) * 100} %]")
 
 
 def HC_RandomForest(x, y):
@@ -72,8 +72,8 @@ def HC_RandomForest(x, y):
         accuracy_arr.append(accuracy)
 
         #/print(f"HyperParameters: {grid_dt_classifier.best_params_}")
-
-    print(f"\n[RandomForest Average Accuracy: {round((sum(accuracy_arr)/len(accuracy_arr)), 4) * 100} %]")
+    print(f"[HyperParameters: {grid_rf_classifier.best_params_}]")
+    print(f"[RandomForest Average Accuracy: {round((sum(accuracy_arr)/len(accuracy_arr)), 4) * 100} %]")
 
 
 def HC_LogisticRegression(x, y):
