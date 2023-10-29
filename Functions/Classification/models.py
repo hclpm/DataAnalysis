@@ -1,4 +1,3 @@
-
 # [Format]
 #
 # HC_DecisionTree(X_train, y_train):
