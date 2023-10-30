@@ -85,9 +85,9 @@ def HC_LogisticRegression(x, y):
     
     # 하이퍼 파라미터 후보 값 지정
     param = {
-        'max_depth' : [1, 2, 3, 4],
+        'max_depth' : [2, 3, 4, 5],
         'min_samples_leaf' : [1, 2, 3, 4],
-        'min_samples_split' : [4, 5, 6, 7, 8]
+        'min_samples_split' : [1, 2, 3, 4, 5, 6, 7, 8]
     }
 
     for i in range(10):
